@@ -1,0 +1,114 @@
+header {
+    display: flex;
+    padding: 16px 150px;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--White-500, #FFF);
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-xxxs, 2px);
+}
+
+.logo p {
+    color: var(--Neutral-Black, #000);
+    font-family: "Public Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    /* 33.6px */
+}
+
+ul {
+    display: flex;
+    width: 637.5px;
+    align-items: center;
+    gap: var(--spacing-sm, 8px);
+    flex-shrink: 0;
+}
+
+ul li {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.list {
+    color: var(--Neutral-800, #3E3E3E);
+    text-align: center;
+
+    /* body/xlarge/medium */
+    font-family: "Public Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 28px */
+    letter-spacing: 0.2px;
+    text-decoration: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 21px;
+}
+
+.login {
+    display: flex;
+    width: 146px;
+    height: 46px;
+    padding: 12px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--Foundation-Main-main-500, #0E6AC7);
+    background: var(--Neutral-White, #FFF);
+}    
+
+.translate {
+    display: flex;
+    width: 146px;
+    height: 46px;
+    padding: 12px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    border: none;
+    background: var(--Foundation-Main-main-500, #0E6AC7);
+}    
+
+.login p {
+    color: var(--Foundation-Main-main-500, #0E6AC7);
+
+    /* body/large/semibold */
+    font-family: "Public Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    /* 22.4px */
+    letter-spacing: 0.2px;
+}    
+
+.translate p {
+    color: var(--Neutral-White, #FFF);
+
+    /* body/large/semibold */
+    font-family: "Public Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    /* 22.4px */
+    letter-spacing: 0.2px;
+}

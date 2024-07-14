@@ -1,0 +1,29 @@
+main {
+    display: flex;
+    padding: 105px 149px 99px 153px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    background: #F4F7FA;
+}
+
+.contentLeft {
+    display: flex;
+    width: 562px;
+    padding-bottom: 28px;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstImg {
+    z-index: 0;
+}
+.secondImg {
+    z-index: 1;
+}
+.thirdImg {
+    z-index: 2;
+}
+.fourthImg {
+    z-index: 3;
+}
