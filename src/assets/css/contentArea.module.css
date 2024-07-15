@@ -1,29 +1,72 @@
-main {
-    display: flex;
-    padding: 105px 149px 99px 153px;
-    justify-content: space-between;
-    align-items: center;
-    align-self: stretch;
-    background: #F4F7FA;
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f4f7fa;
+  padding: 40px; /* Example padding */
 }
 
 .contentLeft {
-    display: flex;
-    width: 562px;
-    padding-bottom: 28px;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 44px;
+  flex-shrink: 0;
 }
 
-.firstImg {
-    z-index: 0;
+.contentLeft button {
+  display: flex;
+  width: 333px;
+  padding: 16px 20px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff; /* Example button background color */
+  color: white; /* Example button text color */
+  font-size: 16px; /* Example button text size */
+  font-weight: 600; /* Example button text weight */
 }
-.secondImg {
-    z-index: 1;
+
+.contentText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px; /* Example gap between elements */
 }
-.thirdImg {
-    z-index: 2;
+
+.contentText p {
+  color: #161c2d;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+  opacity: 0.7;
 }
-.fourthImg {
-    z-index: 3;
+
+.contentText h1 {
+  color: #161c2d;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 51px;
+}
+
+/* Class for stacking images */
+.imageStack {
+  position: relative;
+  width: 100px; /* Example width */
+  height: 100px; /* Example height */
+  margin-top: -60px; /* Adjust this value to stack images properly */
+  z-index: 0;
+}
+
+/* Additional z-indexes */
+.imageStack:nth-child(2) {
+  z-index: 1;
+}
+
+.imageStack:nth-child(3) {
+  z-index: 2;
+}
+
+.imageStack:nth-child(4) {
+  z-index: 3;
 }

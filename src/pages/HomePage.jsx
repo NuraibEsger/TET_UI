@@ -6,8 +6,8 @@ import Translate from "../components/Translate";
 export default function Home() {
   return (
     <div className={classes.main}>
-      <Questions />
       <Translate />
+      <Questions />
     </div>
   )
 }
