@@ -1,12 +1,15 @@
-export default function Button({ classes, children, onClick, img }) {
+import { NavLink } from "react-router-dom";
+
+export default function Button({ classes, children, onClick, img, to }) {
   const buttonStyle = {
     borderRadius: "8px",
     background: "var(--Foundation-Main-main-500, #0E6AC7)",
+    textDocarati: "none"
   };
   return (
-    <button style={buttonStyle}>
+    <NavLink to={to} style={buttonStyle}>
       <p>{children}</p>
       {img ? <img src={img} alt="Arrow" /> : undefined}
-    </button>
+    </NavLink>
   );
 }

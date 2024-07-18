@@ -5,10 +5,10 @@ import TabButton from "../TabButton";
 export default function Questions() {
   return (
     <main>
-      <head>
+      <div className={classes.header}>
         <h1>Tez-tez verilən suallar</h1>
         <p>Bunlar tez-tez eşitdiyimiz suallardır.</p>
-      </head>
+      </div>
       <div className={classes.container}>
         <ul className={classes.questions}>
           <TabButton text = "asdasda">Tərcümə təsdiqi prosesi necə işləyir?</TabButton>

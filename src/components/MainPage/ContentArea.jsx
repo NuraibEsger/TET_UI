@@ -17,7 +17,7 @@ export default function ContentArea() {
         <Button img={arrowImg}>Tərcümə et</Button>
       </div>
       <div className={classes.contentRight}>
-        <img src={firstImg} className={`${classes.imageStack} ${classes.firstImg}`} alt="" />
+        <img src={firstImg} className={classes.imageStack} alt="" />
         
       </div>
     </main>

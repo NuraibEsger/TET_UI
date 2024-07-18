@@ -40,8 +40,8 @@ export default function Header() {
         </ul>
       </nav>
       <div className={classes.buttons}>
-        <button type="button" className={classes.login}><p>Daxil ol</p></button>
-        <button type="button" className={classes.translate}><p>Tərcümə et</p></button>
+        <NavLink type="button" className={classes.login}><p>Daxil ol</p></NavLink>
+        <NavLink type="button" className={classes.translate}><p>Tərcümə et</p></NavLink>
       </div>
     </header>
   );

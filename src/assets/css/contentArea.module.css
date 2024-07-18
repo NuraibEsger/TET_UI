@@ -16,16 +16,29 @@
   flex-shrink: 0;
 }
 
-.contentLeft button {
+.contentLeft a {
   display: flex;
   width: 333px;
   padding: 16px 20px;
   justify-content: space-between;
   align-items: center;
+  text-decoration: none;
   background-color: #007bff; /* Example button background color */
   color: white; /* Example button text color */
   font-size: 16px; /* Example button text size */
   font-weight: 600; /* Example button text weight */
+}
+
+.contentLeft a p {
+  color: var(--Neutral-White, #FFF);
+
+  /* body/large/semibold */
+  font-family: "Public Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 22.4px */
+  letter-spacing: 0.2px;
 }
 
 .contentText {
@@ -50,24 +63,6 @@
   line-height: 51px;
 }
 
-/* Class for stacking images */
-.imageStack {
-  position: relative;
-  width: 100px; /* Example width */
-  height: 100px; /* Example height */
-  margin-top: -60px; /* Adjust this value to stack images properly */
-  z-index: 0;
-}
+
 
 /* Additional z-indexes */
-.imageStack:nth-child(2) {
-  z-index: 1;
-}
-
-.imageStack:nth-child(3) {
-  z-index: 2;
-}
-
-.imageStack:nth-child(4) {
-  z-index: 3;
-}
