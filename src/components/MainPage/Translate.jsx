@@ -1,4 +1,4 @@
-import classes from "../assets/css/translate.module.css";
+import classes from "../../assets/css/translate.module.css";
 import ContentArea from "./ContentArea";
 
 export default function Translate() {

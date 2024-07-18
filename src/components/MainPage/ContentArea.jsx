@@ -1,7 +1,7 @@
-import classes from "../assets/css/contentArea.module.css";
-import firstImg from "../assets/images/specify event details card.png";
-import arrowImg from "../assets/images/ArrowRight.png";
-import Button from "./Button";
+import classes from "../../assets/css/contentArea.module.css";
+import firstImg from "../../assets/images/specify event details card.png";
+import arrowImg from "../../assets/images/ArrowRight.png";
+import Button from "../Button";
 
 export default function ContentArea() {
   return (
@@ -18,6 +18,7 @@ export default function ContentArea() {
       </div>
       <div className={classes.contentRight}>
         <img src={firstImg} className={`${classes.imageStack} ${classes.firstImg}`} alt="" />
+        
       </div>
     </main>
   );

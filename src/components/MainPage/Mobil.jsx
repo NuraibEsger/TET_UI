@@ -1,6 +1,6 @@
-import classes from "../assets/css/mobil.module.css";
-import phoneImg from "../assets/images/iPhone X.png"
-import phoneImg2 from "../assets/images/iPhone X (1).png"
+import classes from "../../assets/css/mobil.module.css";
+import phoneImg from "../../assets/images/iPhone X.png"
+import phoneImg2 from "../../assets/images/iPhone X (1).png"
 
 export default function Mobil() {
   return (
