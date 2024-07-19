@@ -4,7 +4,7 @@ export default function Button({ classes, children, onClick, img, to }) {
   const buttonStyle = {
     borderRadius: "8px",
     background: "var(--Foundation-Main-main-500, #0E6AC7)",
-    textDocarati: "none"
+    textDocarati: "none",
   };
   return (
     <NavLink to={to} style={buttonStyle}>

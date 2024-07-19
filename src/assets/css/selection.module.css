@@ -1,0 +1,98 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 150px;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    align-self: stretch;
+    flex: 1 0 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.header h1 {
+    align-self: stretch;
+    color: var(--Colors-Text-dark, #1E1E2F);
+    text-align: center;
+    font-family: "Public Sans";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.features {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+}
+
+.feature {
+    display: flex;
+    padding: 28px 28px 40px 28px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 36px;
+}
+
+.feature .frame {
+    display: flex;
+    height: 111px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    flex-shrink: 0;
+    align-self: stretch;
+}
+
+.feature .frame h1 {
+    color: var(--Colors-Text-dark, #1E1E2F);
+    font-family: "Public Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    /* 28.8px */
+    align-self: stretch;
+}
+
+.feature .frame p {
+    color: var(--Colors-Text-grey, #4B4B59);
+
+    /* body/large/medium */
+    font-family: "Public Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 22.4px */
+    letter-spacing: 0.2px;
+    align-self: stretch;
+}
+
+.feature a {
+    display: flex;
+    padding: 4px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background: var(--Neutral-White, #FFF);
+}
+
+.feature a p {
+    color: var(--Colors-Text-dark, #1E1E2F);
+    font-family: "Plus Jakarta Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
