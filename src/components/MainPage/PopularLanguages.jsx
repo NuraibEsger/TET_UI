@@ -3,7 +3,7 @@ import LButton from "../LanguageButton"
 import Numbers from "../NumberItem"
 
 export default function PopularLanguages() {
-    return <div className={classes.body}>
+    return <section className={classes.body}>
         <div className={classes.popular}>
             <header>
                 <h1>Ən Populyar Dil Cütlükləri</h1>
@@ -51,5 +51,5 @@ export default function PopularLanguages() {
             <div className={classes.divider}></div>
             <Numbers classes={classes} header="600" math="/s" paragraph="tərcümə edilmiş sözlər  " />
         </div>
-    </div>
+    </section>
 }

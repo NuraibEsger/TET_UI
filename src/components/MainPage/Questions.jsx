@@ -4,7 +4,7 @@ import TabButton from "../TabButton";
 
 export default function Questions() {
   return (
-    <main>
+    <section className={classes.main}>
       <div className={classes.header}>
         <h1>Tez-tez verilən suallar</h1>
         <p>Bunlar tez-tez eşitdiyimiz suallardır.</p>
@@ -24,6 +24,6 @@ export default function Questions() {
           <Button>Əlaqə</Button>
         </div>
       </div>
-    </main>
+    </section>
   );
 }

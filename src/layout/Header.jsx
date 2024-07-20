@@ -40,7 +40,7 @@ export default function Header() {
         </ul>
       </nav>
       <div className={classes.buttons}>
-        <NavLink type="button" className={classes.login}><p>Daxil ol</p></NavLink>
+        <NavLink type="button" to='/login' className={classes.login}><p>Daxil ol</p></NavLink>
         <NavLink type="button" className={classes.translate}><p>Tərcümə et</p></NavLink>
       </div>
     </header>

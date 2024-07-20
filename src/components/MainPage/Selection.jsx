@@ -6,7 +6,7 @@ import Feature from "../Feature";
 
 export default function Selection() {
   return (
-    <main className={classes.main}>
+    <section className={classes.main}>
       <div className={classes.header}>
         <h1>Niyə bizi seçməlisiniz?</h1>
       </div>
@@ -30,6 +30,6 @@ export default function Selection() {
           classes={classes}
         />
       </div>
-    </main>
+    </section>
   );
 }

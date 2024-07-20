@@ -4,7 +4,7 @@ import phoneImg2 from "../../assets/images/iPhone X (1).png"
 
 export default function Mobil() {
   return (
-    <div className={classes.container}>
+    <section className={classes.container}>
       <div className={classes.content}>
         <div className={classes.heading}>
           <h1>Bütün prosesi mobil telefonunuzdan idarə edin</h1>
@@ -25,6 +25,6 @@ export default function Mobil() {
         <img src={phoneImg2} alt="" />
         <img src={phoneImg} className={classes.second} alt="" />
       </div>
-    </div>
+    </section>
   );
 }

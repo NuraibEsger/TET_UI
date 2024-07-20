@@ -1,15 +1,27 @@
-import { NavLink } from "react-router-dom";
+const style = {
+  display: "flex",
+  padding: "16px 20px",
+  justifyContent: "center",
+  alignItems: "center",
+  alignSelf: "stretch",
+  borderRadius: "8px",
+  background: "var(--Foundation-Main-main-500, #0E6AC7)",
+};
 
-export default function Button({ classes, children, onClick, img, to }) {
-  const buttonStyle = {
-    borderRadius: "8px",
-    background: "var(--Foundation-Main-main-500, #0E6AC7)",
-    textDocarati: "none",
-  };
+const textStyle = {
+  color: "var(--Neutral-White, #FFF)",
+  fontFamily: "Public Sans",
+  fontSize: "16px",
+  fontStyle: "normal",
+  fontWeight: "600",
+  lineHeight: "140%",
+  letterSpacing: "0.2px",
+};
+
+export default function Button({ children }) {
   return (
-    <NavLink to={to} style={buttonStyle}>
-      <p>{children}</p>
-      {img ? <img src={img} alt="Arrow" /> : undefined}
-    </NavLink>
+    <button style={style}>
+      <p style={textStyle}>{children}</p>
+    </button>
   );
 }

@@ -5,7 +5,7 @@ import Button from "../Button";
 
 export default function ContentArea() {
   return (
-    <main className={classes.main}>
+    <section className={classes.main}>
       <div className={classes.contentLeft}>
         <div className={classes.contentText}>
           <h1>Zəhmətsiz Tərcümə və Problemsiz Sənəd Təsdiqi</h1>
@@ -20,6 +20,6 @@ export default function ContentArea() {
         <img src={firstImg} className={classes.imageStack} alt="" />
         
       </div>
-    </main>
+    </section>
   );
 }
