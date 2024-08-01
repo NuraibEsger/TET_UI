@@ -18,9 +18,9 @@ const textStyle = {
   letterSpacing: "0.2px",
 };
 
-export default function Button({ children }) {
+export default function Button({ children, onClick, type }) {
   return (
-    <button style={style}>
+    <button type={type} onClick={onClick} style={style}>
       <p style={textStyle}>{children}</p>
     </button>
   );

@@ -1,8 +1,11 @@
 import { NavLink } from "react-router-dom";
 import classes from "../assets/css/login.module.css";
 import Button from "../components/Button";
+import useSignIn from "../hooks/useSignIn";
 
 export default function Login() {
+  const { formik } = useSignIn();
+
   return (
     <div className={classes.login}>
       <section className={classes.container}>
@@ -15,28 +18,28 @@ export default function Login() {
           </div>
           <div className={classes.control}>
             <label htmlFor="tel">Mobil nömrə</label>
-            <input
+             <input
               type="tel"
-              name="tel"
-              id="tel"
-              defaultValue="+994 XX XXX XX XX"
-              onFocus={(e) => {
-                // Check if the value is the default, then clear X placeholders
-                if (e.target.value === "+994 XX XXX XX XX") {
-                  e.target.value = "+994 ";
+              name="number"
+              id="number"
+              value={formik.values.number}
+              onChange={(e) => {
+                const newValue = e.target.value;
+                // Only allow digits after +994
+                if (/^\+994\d*$/.test(newValue)) {
+                  formik.setFieldValue("number", newValue);
                 }
               }}
-              onBlur={(e) => {
-                // If the value is still only +994, restore the default value
-                if (e.target.value === "+994 ") {
-                  e.target.value = "+994 XX XXX XX XX";
+              onBlur={() => {
+                // Optional: Format phone number on blur
+                if (!formik.values.number.startsWith("+994")) {
+                  formik.setFieldValue("number", "+994");
                 }
-              }}
-              onInput={(e) => {
-                // Ensure the input value only contains allowed characters
-                e.target.value = e.target.value.replace(+/[^0-9]/g, "");
               }}
             />
+            {formik.errors.number && formik.touched.number && (
+                <span style={{ color: "red" }}>{formik.errors.number}</span>
+            )}
           </div>
           <div className={classes.control}>
             <label htmlFor="password">Şifrə</label>
@@ -44,7 +47,8 @@ export default function Login() {
               type="text"
               name="password"
               id="password"
-              defaultValue="Şifrəniz"
+              onChange={formik.handleChange}
+              value={formik.values.password}
               onFocus={(e) => {
                 e.target.type = "password";
                 if (e.target.value === "Şifrəniz") {
@@ -58,11 +62,14 @@ export default function Login() {
                 }
               }}
             />
+            {formik.errors.password && formik.touched.password && (
+                <span style={{ color: "red" }}>{formik.errors.password}</span>
+            )}
           </div>
           <div className={classes.forgotPassword}>
             <NavLink>Şifrənizi unutmusunuz?</NavLink>
           </div>
-          <Button>Daxil ol</Button>
+          <Button type="submit" onClick={formik.handleSubmit}>Daxil ol</Button>
         </form>
         <div className={classes.register}>
           <div className={classes.registerHeader}>
