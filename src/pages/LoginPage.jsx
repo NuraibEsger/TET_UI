@@ -7,8 +7,8 @@ export default function Login() {
   const { formik } = useSignIn();
 
   return (
-    <div className={classes.login}>
-      <section className={classes.container}>
+    <section className={classes.login}>
+      <div className={classes.container}>
         <form>
           <div className={classes.inputs}>
             <div className={classes.header}>
@@ -18,7 +18,7 @@ export default function Login() {
           </div>
           <div className={classes.control}>
             <label htmlFor="tel">Mobil nömrə</label>
-             <input
+            <input
               type="tel"
               name="number"
               id="number"
@@ -38,7 +38,7 @@ export default function Login() {
               }}
             />
             {formik.errors.number && formik.touched.number && (
-                <span style={{ color: "red" }}>{formik.errors.number}</span>
+              <span style={{ color: "red" }}>{formik.errors.number}</span>
             )}
           </div>
           <div className={classes.control}>
@@ -63,13 +63,15 @@ export default function Login() {
               }}
             />
             {formik.errors.password && formik.touched.password && (
-                <span style={{ color: "red" }}>{formik.errors.password}</span>
+              <span style={{ color: "red" }}>{formik.errors.password}</span>
             )}
           </div>
           <div className={classes.forgotPassword}>
             <NavLink>Şifrənizi unutmusunuz?</NavLink>
           </div>
-          <Button type="submit" onClick={formik.handleSubmit}>Daxil ol</Button>
+          <Button type="submit" onClick={formik.handleSubmit}>
+            Daxil ol
+          </Button>
         </form>
         <div className={classes.register}>
           <div className={classes.registerHeader}>
@@ -77,7 +79,7 @@ export default function Login() {
           </div>
           <NavLink to="/register">Qeydiyyatdan keç</NavLink>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
