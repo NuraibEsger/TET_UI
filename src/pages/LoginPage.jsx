@@ -77,7 +77,7 @@ export default function Login() {
           <div className={classes.registerHeader}>
             <h1>Hələ üzv deyilsiniz? İndi qoşulun!</h1>
           </div>
-          <NavLink to="/register">Qeydiyyatdan keç</NavLink>
+          <NavLink to="/registerforuser">Qeydiyyatdan keç</NavLink>
         </div>
       </div>
     </section>

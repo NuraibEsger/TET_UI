@@ -33,7 +33,7 @@ export default function Header() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/" className={classes.list}>
+            <NavLink to="/register" className={classes.list}>
               Tərcüməçi ol
             </NavLink>
           </li>
@@ -41,7 +41,7 @@ export default function Header() {
       </nav>
       <div className={classes.buttons}>
         <NavLink type="button" to='/login' className={classes.login}><p>Daxil ol</p></NavLink>
-        <NavLink type="button" className={classes.translate}><p>Tərcümə et</p></NavLink>
+        <NavLink type="button" to='/register' className={classes.translate}><p>Tərcümə et</p></NavLink>
       </div>
     </header>
   );

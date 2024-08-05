@@ -1,6 +1,8 @@
 import { useState } from "react";
 import classes from "../assets/css/register.module.css";
 import SignUp from "../components/Register/SignUp";
+import Button from "../components/Button";
+import Information from "../components/Register/Information";
 
 export default function RegisterPage() {
   const [page, setPage] = useState(0);
@@ -14,34 +16,37 @@ export default function RegisterPage() {
 
   var paragraph = "Bizə bir az özünüz haqqında məlumat verin.";
 
-  const [formDate, setFormData] = useState({
-    name: "",
-    surname: "",
-    birthday: "",
-    gender: "",
-    nationality: "",
-    number: "",
-    email: "",
-    experience: "",
-    existence: "",
-    language: "",
-    languageLevel: "",
-    languageCertificate: "",
-    education: "",
-    specialty: "",
-    startDate: "",
-    endDate: "",
-    aboutUs: "",
-  });
+  const PageDisplay = () => {
+    if (page === 0) {
+      return <SignUp />;
+    } else if (page === 1) {
+      return <Information />;
+    }
+    // Add more conditions here if you have more pages
+  };
+
+  const handleFormSubmit = (e) => {
+    if (page < FormTitles.length - 1) {
+      setPage((currPage) => currPage + 1);      
+    } else {
+      e.preventDefault();
+      // Handle final form submission
+      console.log("Final form data:");
+    }
+  };
 
   return (
     <section className={classes.register}>
-      <form className={classes.form}>
+      <form className={classes.form} onSubmit={handleFormSubmit}>
         <div className={classes.header}>
-          <h1>{FormTitles[0]}</h1>
+          <h1>{FormTitles[page]}</h1>
           <p>{paragraph}</p>
         </div>
-        <SignUp />
+        {PageDisplay()}
+        <Button type={page === FormTitles.length - 1 ? "submit" : "button"} onClick={() => page < FormTitles.length - 1 && handleFormSubmit()
+        }>
+          {page === FormTitles.length - 1 ? "Submit" : "Davam et"}
+        </Button>
       </form>
     </section>
   );
